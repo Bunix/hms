@@ -1,0 +1,37 @@
+# Installation
+
+1. Extract hms.zip
+
+2. Copy hms folder to xampp/wampp server C:\xampp\htdocs
+
+3. Create database named "hms" and import hms.sql
+
+4. Change the base url and htaccess
+
+   - Open config.php file, to do this go to application > config > config.php
+     Go to line#17 and change the base_url from "http://hms-demo:8012/" to "http://localhost/hms/"
+
+   - Update htaccess file, to do this go to your root folder and open .htaccess
+     Go to line#9 and change from "RewriteBase /" to "RewriteBase /hms"
+
+5. Open your browser and type in url "localhost/hms" and ka-boom!
+
+
+
+User Logins (temporary for testing)
+
+Administrator Account
+username: demo-hmsh
+password: hospital
+
+Nurse Account
+username: nurse1
+password: nurse1
+
+Doctor Account
+username: doctor1
+password: doctor1
+
+Recetionist Account
+username: receptionist1
+password: receptionist1
