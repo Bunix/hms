@@ -1,0 +1,78 @@
+ALTER TABLE `client_consultations` ADD `charge_value_second` INT(11) NOT NULL AFTER `charge_value`;
+
+ALTER TABLE `client_consultations` ADD `address_type` VARCHAR(50) NOT NULL AFTER `section_code`;
+
+ALTER TABLE `client_consultations` ADD `hotel_name` VARCHAR(150) NULL DEFAULT NULL AFTER `address`, ADD `room_name` VARCHAR(50) NULL DEFAULT NULL AFTER `hotel_name`, ADD `city` VARCHAR(150) NULL DEFAULT NULL AFTER `room_name`;
+
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_link`, `parent_id`, `menu_sort`, `menu_icon`, `nStatus`) VALUES (NULL, 'consultation_report', 'consultation_report', '44', '5', '', '1');
+
+INSERT INTO `group_permission` (`permission_id`, `group_id`, `menu_id`, `permission_name`) VALUES (NULL, 'a:2:{i:1;s:1:\"4\";i:2;s:1:\"1\";}', '50', 'allow_to_print');
+
+
+========================================
+
+
+NOTES
+- Add Charge Value field
+- We have two charge value
+Let say:
+300 = Total Fees
+10 = 1st Charge Value
+3 = 2nd Charge Value
+
+If percentage charge
+300 + 10% = 330
+330 + 3% = 339.90
+339.90 = Amount to be Paid
+
+If direct charge
+300 + 10 = 310
+310 + 3 = 313
+313 = Amount to be Paid
+
+Total Charge Fee need to remove
+
+================================
+
+Modifications in address
+
+Option to pick either "Address" or "Hotel"
+
+If Address then show dropdown menu for address
+If Hotel show hotel fields:
+	hotel name, room name, city
+
+The default option is Hotel
+
+
+===============================
+move company commission in the end right above the notes
+=============================
+When i chose one name and inquiry for the last 30 days, all records show not just that one name
+
+
+
+
+
+
+
+
+Also i need to see all days consultation activities when i click on the "Today's Appointment" like a report generated maybe.
+
+
+Also can you make a report for the consultations
+
+If i want to see all of them for today or yesterday or custom the same as the other reports?
+
+
+
+
+
+
+
+
+
+
+
+
+

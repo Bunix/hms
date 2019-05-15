@@ -1,0 +1,7 @@
+{
+    "require": {
+        "slim/slim": "^3.9",
+        "tuupola/slim-basic-auth": "^2.3",
+        "tuupola/cors-middleware": "^0.5.2"
+    }
+}
